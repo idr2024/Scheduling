@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Appointment Booking API
+  version: "1.0"
+servers:
+  - url: 'https://script.google.com/macros/s/AKfycbw7crDj8kRrmhJ-9JPxFoIOddh2OFrZlJGQJNJdALk/dev'
+paths:
+  /bookAppointment:
+    post:
+      summary: "Book an appointment"
+      operationId: "bookAppointment"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                start:
+                  type: string
+                  format: date-time
+                end:
+                  type: string
+                  format: date-time
+      responses:
+        '200':
+          description: "Appointment successfully booked"
+        '409':
+          description: "This slot is already booked. Please choose another time."
