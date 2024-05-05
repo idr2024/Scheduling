@@ -3,7 +3,7 @@ info:
   title: Appointment Booking API
   version: "1.0"
 servers:
-  - url: 'https://script.google.com/macros/s/AKfycbw7crDj8kRrmhJ-9JPxFoIOddh2OFrZlJGQJNJdALk/dev'
+  - url: 'https://script.google.com/macros/s/AKfycbw7crDj8kRrmhJ-9JPxFoIOddh2OFrZlJGQJNJdALk/dev
 paths:
   /bookAppointment:
     post:
